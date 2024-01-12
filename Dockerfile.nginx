@@ -1,0 +1,11 @@
+# Use an official Nginx image as the base image
+FROM nginx:latest
+
+# Copy the contents of the local php-hello-world directory to the default Nginx web root directory
+COPY . /usr/share/nginx/html
+
+# Expose port 80 to the outside world
+EXPOSE 80
+
+# Start Nginx when the container starts
+CMD ["nginx", "-g", "daemon off;"]

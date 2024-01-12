@@ -1,0 +1,11 @@
+# Use an official httpd image as the base image
+FROM httpd:latest
+
+# Copy the contents of the local php-hello-world directory to the default Apache web root directory
+COPY . /usr/local/apache2/htdocs
+
+# Expose port 80 to the outside world
+EXPOSE 80
+
+# Start Apache when the container starts
+CMD ["httpd-foreground"]
