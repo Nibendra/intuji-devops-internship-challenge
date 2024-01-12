@@ -1,0 +1,6 @@
+version: '3'
+services:
+  web:
+    image: nibendra/php-hello-world:nginx
+    ports:
+      - "8080:80"
